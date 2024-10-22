@@ -1,0 +1,68 @@
+.search-section {
+  position: relative;
+  margin-right: 0;
+  margin-left: 250px;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding-top: 6rem;
+  padding-left: 3rem;
+  padding-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-section > select {
+  padding: 5px;
+}
+
+.search-input {
+  padding: 7px;
+  width: 50vh;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 2vh;
+}
+
+.search-input:focus {
+  border-color: rgb(10, 106, 233);
+}
+
+.search-btn {
+  padding: 7px 16px;
+  margin-left: 5px;
+  background-color: rgb(10, 106, 233);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgb(65, 63, 63);
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+.employees-component__container {
+  margin-top: 20px;
+}
+
+.employee-table {
+  width: 95%;
+  margin-top: 5vh;
+  border-collapse: collapse;
+}
+
+.employee-table th, .employee-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.employee-table th {
+  background-color: #f2f2f2;
+}
+
+pagination-controls {
+  margin-top: 20px;
+}
+
+

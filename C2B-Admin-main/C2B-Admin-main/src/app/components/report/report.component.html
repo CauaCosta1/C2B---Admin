@@ -1,0 +1,22 @@
+<div class="report-component__container">
+    <div class="report__component">
+        <div class="report-header">
+            <h2>Relatórios</h2>
+        </div>
+        <div class="reports-section">
+            <div *ngFor="let report of reports.slice(0, 8)" class="report-item">
+                <p>{{ report.name }} - {{ report.date }}</p>
+
+                <button (click)="aprovedReport(report)" class="approved-btn"><i class="bi bi-check"></i></button>
+                <button (click)="rejectedReport(report)" class="rejected-btn"><i class="bi bi-x"></i></button>
+                <button (click)="downloadReport(report)" class="download-btn"><i class="bi bi-download"></i></button>
+
+                <!-- Adjust the properties based on your actual report data -->
+            </div>
+        </div>
+        <div class="file-upload-section">
+            <h3>Enviar Relatório</h3>
+            <input type="file" (change)="onFileSelected($event)" />
+        </div>
+    </div>
+</div>

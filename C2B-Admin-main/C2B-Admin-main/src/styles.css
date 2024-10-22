@@ -1,0 +1,12 @@
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container-global {
+    position: fixed;
+    z-index: 999;
+}

@@ -1,0 +1,54 @@
+<div class="report-view__container">
+    <div class="report-header">
+        <h3>Tabela de Relatórios</h3>
+    </div>
+    <div class="reports-table__container">
+        <!-- Tabela de Aprovados -->
+        <div class="table-container">
+            <table class="employee-table_Aproved">
+                <thead>
+                    <tr>
+                        <th>Aprovados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let report of reportsAproved">
+                        <td>{{ report.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela de Reprovados -->
+        <div class="table-container">
+            <table class="employee-table_rejected">
+                <thead>
+                    <tr>
+                        <th>Reprovados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let report of reportsRejected ">
+                        <td>{{ report.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela de Em Análise -->
+        <div class="table-container">
+            <table class="employee-table__analysis">
+                <thead>
+                    <tr>
+                        <th>Em Análise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let report of reportsAnalysis">
+                        <td>{{ report.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

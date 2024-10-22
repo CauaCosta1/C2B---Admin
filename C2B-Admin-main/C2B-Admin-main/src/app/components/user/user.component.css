@@ -1,0 +1,79 @@
+.user-profile__container {
+    position: relative;
+    height: 100vh;
+    margin-right: 0;
+    margin-left: 250px;
+    background-color: rgb(116, 192, 192);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.profile-header {
+    font-size: 24px;
+    padding-bottom: 1rem;
+}
+
+.user-card {
+    padding-top: 8rem;
+    padding-left: 3rem;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #5ea7f5;
+    color: #fff;
+    padding: 50px;
+}
+
+.user-info p {
+    margin-bottom: 10px;
+}
+
+.user-card__body>p {
+    padding-bottom: 10px;
+}
+
+.user-button__edit .button-e {
+    background-color: rgb(10, 106, 233);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 10px 20px;
+    margin-right: 7px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px 1px rgb(65, 63, 63);
+}
+
+
+.edit-modal button {
+    background-color: rgb(10, 106, 233);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px 1px rgb(65, 63, 63);
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+ul li {
+    padding: 5px;
+    max-width: 150px;
+    border-radius: 5px;
+}

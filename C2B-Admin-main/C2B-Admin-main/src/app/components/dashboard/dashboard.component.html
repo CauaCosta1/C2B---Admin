@@ -1,0 +1,37 @@
+<div class="dashboard__container">
+  <div class="container__home-menu">
+    <div class="menu-bar__container">
+      <div class="menu-bar__logo">
+        <h2>C2B Admin</h2>
+      </div>
+      <div class="menu-bar__item">
+        <p>Seja bem-vindo(a) {{ usernameAuth }}!</p>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-menu__lateral">
+    <div class="menu-lateral__items">
+      <div class="dropdown-menu__report" [ngClass]="{'open': isDropdownOpenReport}">
+        <button (click)="toggleDropdown('report')">
+          <a [routerLink]="['/dashboard/report']">Relatórios</a>
+        </button>
+        <div *ngIf="isDropdownOpenReport" class="submenu__report">
+          <a [routerLink]="['/dashboard/report/search']" routerLinkActive="router-link-active">Pesquisar</a>
+        </div>
+        <div *ngIf="isDropdownOpenReport" class="submenu__report">
+          <a [routerLink]="['/dashboard/report/report-view']" routerLinkActive="router-link-active">Vizualizar</a>
+        </div>
+      </div>
+      <div class="dropdown-menu__employee" [ngClass]="{'open': isDropdownOpenEmployee}">
+        <button (click)="toggleDropdown('employee')">
+          <a [routerLink]="['/dashboard/employees']">Funcionários</a>
+        </button>
+        <div *ngIf="isDropdownOpenEmployee" class="submenu_employee">
+          <a [routerLink]="['/dashboard/employees/search']" routerLinkActive="router-link-active">Encontrar funcionário</a>
+        </div>
+      </div>
+      <a [routerLink]="['/dashboard/user-profile']" routerLinkActive="router-link-active">Meu perfil</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

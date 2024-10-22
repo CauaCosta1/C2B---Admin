@@ -1,0 +1,24 @@
+<div class="search-section">
+    <input type="text" [(ngModel)]="searchQuery" class="search-input" />
+    
+    <!-- Dropdown for search options -->
+    <select [(ngModel)]="selectedSearchOption" class="search-dropdown">
+        <option value="data">Data</option>
+        <option value="nome">Nome</option>
+    </select>
+    
+    <button (click)="searchReports(searchQuery)" class="search-btn">Pesquisar</button>
+    
+    <div class="report-search__subheader">
+        <h4>Relatórios encontrados</h4>
+    </div>
+    
+    <div class="reports-section">
+        <div *ngFor="let report of reports.slice(0, 10)" class="report-item">
+            <!-- Display report information here -->
+            <p>{{ report.name }} - {{ report.date }}</p>
+            <button (click)="downloadReport(report)">Baixar</button>
+            <!-- Adjust the properties based on your actual report data -->
+        </div>
+    </div>
+</div>

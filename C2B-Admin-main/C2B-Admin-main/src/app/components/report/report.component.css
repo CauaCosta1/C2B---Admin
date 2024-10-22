@@ -1,0 +1,118 @@
+.report-component__container {
+  display: flex;
+}
+
+.report-header {
+  width: 100vh;
+  margin-bottom: 5vh;
+}
+
+.report__component {
+  position: relative;
+  height: 100vh;
+  margin-right: 0;
+  margin-left: 250px;
+  padding-top: 6rem;
+  padding-left: 3.6rem;
+
+  background-color: rgb(116, 192, 192);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.reports-section {
+  width: 172vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+  gap: 20px;
+
+}
+
+.report-item {
+  display: flex;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 80vh;
+  max-height: 80vh;
+  justify-content: space-between;
+  position: relative; /* Adicionado para posicionar os botões relativos a este elemento */
+}
+
+.report-item > button {
+  color: #ffffff;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 8px; 
+  padding: 0px 2px;
+  padding-top: 2px;
+  border-radius: 4px;
+  box-shadow: 1px 3px 3px 1px rgb(65, 63, 63);
+
+}
+
+.report-item > .approved-btn {
+  background-color: green;
+  right: 74px; 
+}
+
+.report-item > .rejected-btn {
+  background-color: red;
+  right: 43px; 
+}
+
+.report-item > .download-btn {
+  background-color: rgb(10, 106, 233);
+  padding: 4px 8px;
+  padding-top: 5px;
+  font-size: 16px;
+  right: 7px;
+}
+
+.report-item>p {
+  padding-right: 10vh;
+}
+
+.file-upload-section {
+  margin-top: 20px;
+  width: 70vh;
+}
+
+.file-upload-section > input {
+  width: 70vh;
+  padding: 5px;
+  margin-top: 10px;
+  margin-right: 20px;
+  align-self: flex-start;
+
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.search-input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+  .report-component__container {
+    flex-direction: column;
+  }
+
+  .report__component {
+    margin-left: 0;
+  }
+
+  .reports-section,
+  .search-section {
+    width: 100%;
+  }
+}

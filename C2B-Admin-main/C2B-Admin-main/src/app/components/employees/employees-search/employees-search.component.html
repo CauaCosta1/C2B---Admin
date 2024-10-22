@@ -1,0 +1,27 @@
+<div class="search-section">
+  <input type="text" [(ngModel)]="searchQuery" class="search-input" name="searchQuery" />
+  <button (click)="searchEmployees()" class="search-btn">Pesquisar</button>
+
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Projetos</th>
+        <th>Data de Admissão</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of filteredEmployees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.projects }}</td>
+        <td>{{ employee.dateAdmiss}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls [(ngModel)]="p" [maxSize]="itemsPerPage"></pagination-controls>
+</div>

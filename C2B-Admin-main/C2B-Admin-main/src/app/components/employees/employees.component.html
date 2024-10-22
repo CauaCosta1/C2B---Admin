@@ -1,0 +1,24 @@
+<div class="employees-component__container">
+    <table class="employee-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Projetos</th>
+          <th>Data de Admissão</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees | slice:(p-1)*itemsPerPage : p*itemsPerPage">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.phone }}</td>
+          <td>{{ employee.projects }}</td>
+          <td>{{ employee.dateAdmiss}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <pagination-controls [(ngModel)]="p" [maxSize]="itemsPerPage"></pagination-controls>
+  </div>
